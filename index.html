@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Anderson | Desenvolvedor C#</title>
+
+  <meta name="description" content="Portfólio de Anderson Madalena.">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- NAV -->
+<nav class="nave">
+  <ul class="menu">
+    <li><a href="#inicio" class="menulink">Início</a></li>
+    <li><a href="#sobre" class="menulink">Sobre</a></li>
+    <li><a href="#projetos" class="menulink">Projetos</a></li>
+    <li><a href="#contato" class="menulink">Contato</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<main id="inicio" class="hero container">
+
+  <img src="img/perfil.jpeg" alt="Foto de Anderson Madalena" class="fotoperfil">
+
+  <h1 class="titulo">Anderson Madalena</h1>
+  <p class="subtitulo">Desenvolvedor Back-end em formação</p>
+
+  <div class="techs">
+    <span>C#</span>
+    <span>.NET</span>
+    <span>APIs REST</span>
+    <span>HTML</span>
+    <span>CSS</span>
+    <span>JavaScript</span>
+  </div>
+
+  <a href="#projetos" class="botao">Ver Projetos</a>
+
+  <div class="social">
+    <a href="https://github.com/anderson-bitt-hub" target="_blank" rel="noopener noreferrer">
+      <i class="fa-brands fa-github"></i>
+    </a>
+
+    <a href="https://www.linkedin.com/in/anderson-dos-santos-madalena-5788bb2a8" target="_blank" rel="noopener noreferrer">
+      <i class="fa-brands fa-linkedin"></i>
+    </a>
+  </div>
+</main>
+
+<!-- SOBRE -->
+<section id="sobre" class="section">
+  <div class="container">
+    <h2>Sobre Mim</h2>
+
+    <div class="sobrecaixa">
+      <p>
+        Estudante de Tecnologia da Informação com foco em desenvolvimento Back-end utilizando C# e .NET.
+        Experiência em criação de APIs REST, validações de dados e lógica de negócio.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- PROJETOS -->
+<section id="projetos" class="section">
+  <div class="container">
+    <h2>Meus Projetos</h2>
+
+    <div class="grid">
+
+      <div class="card">
+        <div class="placeholder">Imagem do Projeto</div>
+        <h3>Site Portfólio</h3>
+        <p>Site desenvolvido com HTML e CSS.</p>
+        <a href="https://github.com/anderson-bitt-hub/Portf-lio" class="btn" target="_blank" rel="noopener noreferrer">
+          Ver código <i class="fa-brands fa-github"></i>
+        </a>
+      </div>
+
+      <div class="card">
+        <img src="img/APi.png" alt="Projeto API em C#" class="img-projeto">
+        <h3>API em C#</h3>
+        <p>API com validações de CPF e e-mail.</p>
+        <a href="https://github.com/anderson-bitt-hub/Aula-05" class="btn" target="_blank" rel="noopener noreferrer">
+          Ver código <i class="fa-brands fa-github"></i>
+        </a>
+      </div>
+
+      <div class="card">
+        <img src="img/formada.jpeg" alt="Projeto site de veterinária" class="img-projeto">
+
+        <h3>Site Veterinária</h3>
+        <p>
+          Site institucional desenvolvido para uma veterinária, com foco em apresentação de serviços,
+          contato e presença online profissional.
+        </p>
+
+        <div class="botoes">
+          <a href="https://github.com/anderson-bitt-hub/site-MV" target="_blank" rel="noopener noreferrer" class="btn">
+            Ver código <i class="fa-brands fa-github"></i>
+          </a>
+
+          <a href="https://anderson-bitt-hub.github.io/site-MV/" target="_blank" rel="noopener noreferrer" class="btn secundario">
+            Ver site
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- CONTATO -->
+<section id="contato" class="section">
+  <div class="container">
+    <h2>Contato</h2>
+
+    <form id="formulario" data-whatsapp="5554999304142">
+      <input type="text" id="nome" placeholder="Nome" required>
+      <textarea id="mensagem" placeholder="Mensagem" required></textarea>
+
+      <button type="submit">Enviar via WhatsApp</button>
+    </form>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <p>© 2026 Anderson Madalena</p>
+</footer>
+
+<!-- JS WHATSAPP -->
+<script>
+document.getElementById('formulario').addEventListener('submit', function(event) {
+  event.preventDefault();
+
+  const nome = document.getElementById('nome').value.trim();
+  const mensagem = document.getElementById('mensagem').value.trim();
+
+  if (!nome || !mensagem) {
+    alert('Preencha todos os campos');
+    return;
+  }
+
+  const numero = this.getAttribute('data-whatsapp');
+  const texto = `Nome: ${nome}\nMensagem: ${mensagem}`;
+
+  const link = `https://wa.me/${numero}?text=${encodeURIComponent(texto)}`;
+
+  window.open(link, '_blank');
+});
+</script>
+
+<!-- ANIMAÇÃO SCROLL -->
+<script>
+const sections = document.querySelectorAll(".section");
+
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add("show");
+    }
+  });
+}, { threshold: 0.2 });
+
+sections.forEach(section => observer.observe(section));
+</script>
+
+</body>
+</html>
