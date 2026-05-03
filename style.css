@@ -23,14 +23,12 @@ body {
   transition: 0.3s;
 }
 
-/* CONTAINER */
 .container {
   max-width: 1100px;
   margin: 0 auto;
   padding: 0 20px;
 }
 
-/* NAV */
 .nave {
   position: fixed;
   top: 0;
@@ -73,7 +71,6 @@ body {
   width: 100%;
 }
 
-/* HERO */
 .hero {
   text-align: center;
   padding: 120px 20px 80px;
@@ -96,7 +93,6 @@ body {
   color: var(--text-soft);
 }
 
-/* FOTO PERFIL */
 .fotoperfil {
   width: 180px;
   height: 180px;
@@ -111,7 +107,6 @@ body {
   transform: scale(1.05);
 }
 
-/* TECH TAGS */
 .techs {
   margin-top: 15px;
   display: flex;
@@ -128,24 +123,6 @@ body {
   color: #cfcfe8;
 }
 
-/* BOTÃO */
-.botao {
-  display: inline-block;
-  margin-top: 20px;
-  padding: 12px 22px;
-  background: linear-gradient(45deg, var(--primary), var(--secondary));
-  color: white;
-  text-decoration: none;
-  border-radius: 10px;
-  transition: 0.3s;
-}
-
-.botao:hover {
-  transform: translateY(-3px);
-  filter: brightness(1.1);
-}
-
-/* REDES SOCIAIS */
 .social {
   display: flex;
   justify-content: center;
@@ -171,7 +148,6 @@ body {
   color: var(--primary);
 }
 
-/* SEÇÕES */
 .section {
   padding: 80px 20px;
   text-align: center;
@@ -185,7 +161,6 @@ body {
   transform: translateY(0);
 }
 
-/* SOBRE */
 .sobrecaixa {
   max-width: 800px;
   margin: 0 auto;
@@ -196,7 +171,6 @@ body {
   color: #cfcfe8;
 }
 
-/* PROJETOS */
 .grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -223,7 +197,6 @@ body {
   margin-bottom: 10px;
 }
 
-/* BOTÃO CARD */
 .btn {
   display: inline-block;
   margin-top: 10px;
@@ -239,7 +212,6 @@ body {
   background: var(--secondary);
 }
 
-/* FORM */
 form {
   max-width: 500px;
   margin: 0 auto;
@@ -279,7 +251,6 @@ button:hover {
   transform: translateY(-2px);
 }
 
-/* FOOTER */
 footer {
   text-align: center;
   padding: 20px;
@@ -288,7 +259,6 @@ footer {
   color: var(--text-soft);
 }
 
-/* RESPONSIVO */
 @media (max-width: 768px) {
   .menu {
     gap: 20px;
